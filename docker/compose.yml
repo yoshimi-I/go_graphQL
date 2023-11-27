@@ -18,12 +18,12 @@ services:
     ports:
       - 3306:3306
 
-  backend:
+  api:
     build:
-      context: ./backend/
+      context: ./api/docker
       dockerfile: Dockerfile
     volumes:
-      - ./backend/api/:/backend/api/
+      - ./api/src/:/api/src
     environment:
       - TZ=Asia/Tokyo
     ports:
