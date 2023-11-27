@@ -1,0 +1,36 @@
+# テンプレート
+# ビルドファイルやコンパイル結果を無視する
+/build/
+/bin/
+/out/
+/node_modules/
+
+# パッケージマネージャのキャッシュを無視する
+npm-debug.log
+yarn-error.log
+
+# 環境固有の設定ファイルを無視する
+.env
+.env.local
+.env.*.local
+.envrc
+
+# IDEやエディタの設定ファイルを無視する
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+# バックアップファイルを無視する
+*~
+*.swp
+.DS_Store
+
+# ログファイルやテンポラリファイルを無視する
+/logs/
+/temp/
+
+# カスタム設定ファイルの例
+# /config/my-custom-config.json
+
+# 特定のファイルやディレクトリを無視する場合
+# /path/to/ignored/file_or_directory
