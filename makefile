@@ -5,16 +5,19 @@ DSN=$(MYSQL_USER):$(MYSQL_PASSWORD)@tcp($(MYSQL_HOST):$(MYSQL_PORT))/$(MYSQL_DAT
 # Dockerを立ち上げる
 # 全て立ち上げる
 all-d:
-	docker-compose up -d
+	cd docker && docker-compose up -d
 # フォアグラウンドで立ち上げる
 all:
-	docker-compose up
+	cd docker && docker-compose up
 # dbとapiだけ立ち上げる
 db-api:
-	docker-compose up db api
+	cd docker && docker-compose up db api
 # apiだけ立ち上げる
 api:
-	docker-compose up api
+	cd docker && docker-compose up api
 # Dockerを停止する
 stop:
-	docker-compose stop
+	cd docker && docker-compose stop
+# コンテナに入る
+api-exec:
+	cd docker && docker exec -it attendanceapp-backend-1 sh

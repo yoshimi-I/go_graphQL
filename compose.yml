@@ -20,8 +20,8 @@ services:
 
   api:
     build:
-      context: ./api/docker
-      dockerfile: Dockerfile
+      context: .
+      dockerfile: api/docker/Dockerfile
     volumes:
       - ./api/src/:/api/src
     environment:
